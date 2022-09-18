@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #signUpContainer {
+    width: 500px;
+    height: 650px;
+    border: 3px solid;
+    border-top-color: lightgrey;
+    border-right-color: lightblue;
+    border-bottom-color: grey;
+    border-left-color: rgb(31, 31, 34);
+    border-radius: 10px;
+    margin: 50px;
+  }
+
+  #signUpContainer h1 {
+    color: black;
+    text-decoration: underline;
+    margin: 10px;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label
+  {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+  }
+ 
+  input {
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+    color: black;
+    text-indent: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  #button_signUp {
+    width: 200px;
+    height: 40px;
+    border: 2px solid yellowgreen;
+    color: orangered;
+    font-size: 25px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  #loginContainer {
+    width: 500px;
+    height: 520px;
+    border: 3px solid;
+    border-top-color: red;
+    border-right-color: orange;
+    border-bottom-color: green;
+    border-left-color: yellow;
+    border-radius: 10px;
+    margin: 50px;
+  }
+  #loginContainer h1 {
+    color: black;
+    text-decoration: underline;
+    margin: 10px;
+    text-align: center;
+  }
+
+  #button_signIn {
+    width: 200px;
+    height: 40px;
+    border: 2px solid yellowgreen;
+    color: orangered;
+    font-size: 25px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .endingLine {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .endingLine p {
+    font-size: 25px;
+    color: blue;
+    font-style: italic;
+    text-decoration: underline;
+    margin: 10px;
+  }
+  .endingLine button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 23px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .endingLine button:hover {
+    color: black;
+    background-color: white;
+  }
+
+  #friendContainer {
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    border: 3px solid black;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+  }
+  #friend_heading {
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+  }
+  .rowDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 790px;
+    height: 550px;
+    
+  }
+  .suggestions {
+    display: flex;
+flex-direction: column;
+border: 2px solid black;
+background-color: #f1e8e8;
+color: green;
+width: 300px;
+height: 420px;
+margin-right: 10px;
+  }
+  .suggestion_names {
+    display: flex;
+    flex-direction: column;
+  }
+  .suggestion_inner_part {
+    display: flex;
+  }
+  .suggestion_inner_part label {
+    margin-left: 5px;
+    font-size: 22px;
+    margin-top: 3px 0;
+    color: #e20b0b;
+  }
+  .suggestion_inner_part button {
+    width: 100px;
+    height: 30px;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+  #ymk {
+    text-align: center;
+    color: black;
+  }
+
+  #friendNames {
+    width: 440px;
+height: 300px;
+font-size: 25px;
+display: flex;
+flex-direction: column;
+margin-top: -110px;
+  }
+  #friendNames h1
+  {
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #friendNames_text {
+    color: brown;
+    font-size: 25px;
+  }
+
+  #friend_buttons button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 35px;
+    margin-left: 10px;
+  }
+
+  #post_screen
+  {
+    width: 600px;
+    height: 600px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #post_screen label
+  {
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  #post_screen input
+  {
+    width: 350px;
+    height: 80px;
+    border: 2px solid whitesmoke;
+    color: white;
+    background-color: black;
+    text-indent: 10px;
+    font-size: 25px;
+  }
+  #post_screen textarea
+  {
+    border: 2px solid green;
+    border-radius: 15px;
+    padding: 10px;
+    font-size:20px; 
+    width:500px; height:300px;
+  }
+
+  #post_screen_btn
+  {
+    width: 300px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 22px;
+
+  }
+  #posts
+  {
+    width: 400px;
+    height: 400px;
+    border: 3px solid grey;
+  }
+  #posts_p
+  {
+    font-size: 20px;
+    color: #e20b0b;
+    background-color: #f1e8e8;
+
+  }

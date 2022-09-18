@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Registeration to Friend Screen</title>
+    <link rel="stylesheet" href="Assignment 15.css">
+    <link rel="stylesheet" href="Assignment 15 phone.css">
+
+  </head>
+
+  <body>
+    <!-- 1st Screen >>> Registeration -->
+
+    <div id="signUpContainer">
+      <h1>Registeration Form</h1>
+
+      <form>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your Full Name" required>
+
+        <label for="profile_url">Profile Picture Link: </label>
+        <input type="text" id="profile_url"  placeholder="Enter your profile picture(URL)"/>
+
+          
+        <label for="email_id">Email: </label>
+        <input type="email" id="email_id" placeholder="Enter your email address" required >
+
+        <label for="password_id">Password: </label>
+        <input type="password" id="password_id" placeholder="Enter your password" required />
+        
+        <br />
+
+        <button id="button_signUp" onclick="displayLogin()">Sign Up</button>
+
+        <div class="endingLine">
+            <p>
+              Already have an account, <br> then click on the below login button.
+            </p>
+            <button onclick="simplyLogin()">
+              <a href="#loginContainer"> Login Here </a>
+            </button>
+        </div>
+      </form>
+      <!-- <p id="jsontext"></p> -->
+    </div>
+
+    <!-- 2nd Screen >>> Login  -->
+
+    <div id="loginContainer" style="display: none">
+      <h1>Login Screen</h1>
+      <form>
+        <label for="email_id">Email: </label>
+        <input type="email" id="email_loginId" placeholder="Enter your email address"/>
+
+        <label for="password_id">Password: </label>
+        <input
+          type="password"
+          id="psw_loginId"
+          placeholder="Enter your password"
+        />
+        <br />
+        <br />
+
+        <button id="button_signIn" onclick="checkingCredentails()">
+          Sign In
+        </button>
+      </form>
+
+      <div class="endingLine">
+        <p>
+          If you don't have an account, <br> then click on the below signup button.
+        </p>
+        <button onclick="displaySignUp()">
+          <a href="#signUpContainer"> SignUp Here </a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Third Screen Of the project which is Friends Screen: -->
+
+    <div id="friendContainer" style="display: none;" >
+
+      <h1 id="friend_heading">Welcome Heading</h1>
+
+      <div class="rowDiv">
+
+        <div id="friendNames">
+            <h1> Friend list</h1>
+            <p id="friendNames_text"></p>
+        </div>
+
+        <div class="suggestions">
+          <h2 id="ymk">You May know Them</h2>
+
+          <div class="suggestion_names">
+
+            <div class="suggestion_inner_part">
+              <label id="label_text"> Abdullah </label>
+              <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+            </div>
+
+            <div class="suggestion_inner_part">
+              <label id="label_text"> Babar </label>
+              <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+            </div>
+
+            <div class="suggestion_inner_part">
+              <label id="label_text"> Cameron </label>
+              <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+            </div>
+
+            <div class="suggestion_inner_part">
+                <label id="label_text"> Danish: </label>
+                <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+              </div>
+
+              <div class="suggestion_inner_part">
+                <label id="label_text"> Emran </label>
+                <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+              </div>
+            
+              <div class="suggestion_inner_part">
+                <label id="label_text"> Fakhar </label>
+                <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+              </div>
+
+              <div class="suggestion_inner_part">
+                <label id="label_text"> Gohar </label>
+                <button  onclick="addthese(event)">Add Friend</button>
+              <button onclick="removethese(event)">RemoveFriend</button>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+<!-- 
+      <div id="friend_buttons">
+        <button onclick="addFriend()">Add Friend</button>
+        <button onclick="removeFriend()">Remove Friend</button>
+      </div> -->
+
+      <button id="post_screen_btn" onclick="postData()">Want to see or create post</button>
+    </div>
+
+    <!-- Fourth Screen which is of Posts -->
+
+    <div id="post_screen" style="display: none;">
+      <label for="description"> Description For a Post:</label>
+      <textarea name="text" id="description" cols="60" rows="20"></textarea>
+
+      <br>
+
+      <label for="input_file">Contact Number: </label>
+      <input type="number" id="input_number">
+
+      <button id="post_screen_btn" onclick="pushPostdata(); posts()"> Post data to object</button>
+      
+    </div>
+
+    <div id="posts" style="display:none;">
+      <h2 id="posts_h2"></h2>
+      <br>
+      <p id="posts_p"></p>
+    </div>
+
+
+    <script src="Assignment 15.js"></script>
+
+
+    <!-- JavaScript Code Here:
+      
+      // Part: 03 Add a Friend
+
+      // var users_list = [];
+      // function User_Credentials(name,profile)
+      // {
+      //     this.id = Math.random().toFixed(6).slice(2);
+      //     this.name = name;
+      //     this.profile = profile;
+      //     this.createdAt = Date.now();
+      //     this.friends = [];
+      // }
+
+      // var u1 = new User_Credentials("Asad","abc");
+      // var u2 = new User_Credentials("Babar","def");
+      // var u3 = new User_Credentials("Carry","ghi");
+      // var u4 = new User_Credentials("Danish","jkl");
+
+      // users_list.push(u1,u2,u3,u4);
+      // console.log(users_list);
+
+      // function addFriend()
+      // {
+      //     var userId = prompt(" Enter the user name:");
+      //     var friendId = prompt(" Enter the friend name:");
+
+      //     for(var i = 0 ; i<Users.length ; i++)
+      //     {
+      //         if(userId == Users[i].id)
+      //         {
+      //             Users[i].friends.push(friendId);
+      //         }
+      //     }
+      // }
+
+      // function removeFriend(userId, friendId)
+      // {
+      //     for(var i = 0 ; i<users_list.length ; i++)
+      //     {
+      //         if(userId ==  users_list[i].id)
+      //         {
+      //             var friend_index = users_list[i].friends.indexOf(friendId);
+      //             users_list.splice(friend_index, 1);
+      //         }
+      //     }
+      // }
+      -->
+
+  </body>
+</html>
